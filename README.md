@@ -94,7 +94,7 @@ Test from Browser (GUI)
 -------------------------
 We also require fx-orders-processor microservice https://github.com/pmjobsearch01/fx-orders-processor.git to run along with fx-orders-capture microservice.
 
-Once both of the applications is up and running by using above run command open a browser and test the application using below url
+Once both of the applications are up and running by using above run command open a browser and test the application using below url
 
 http://localhost:8080/
 
