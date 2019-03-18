@@ -105,4 +105,4 @@ http://localhost:8080/
 ![searchOrder](doc/searchOrder.jpg)
 
 
-You may contact me for professional consulation around an issue or enhancement e.g. adding docker containers or additional functional or non-functional aspects or request-response tuning etc. https://www.linkedin.com/in/parthamondal/
+You may contact me for professional consulation around an issue or enhancement e.g. adding docker containers or additional functional or non-functional aspects or request-response tuning etc. partha.contact@gmail.com 
