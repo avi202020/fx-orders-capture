@@ -12,7 +12,7 @@ This microservice work together with another microservice https://github.com/pmj
 # This microservice (fx-orders-capture) is responsible for 
 
 * to capture an order and publish in to kafka topic (tradeCapture) and get an acknowledgement
-* to get a order ID to publish it to kafka topic (tradeRequest) 
+* to get a order ID entered by user in the front-end and publish it to kafka topic (tradeRequest) 
 * retrive a response from kafka topic (tradeReply) and display it to front end
 
 ## Overall architecture
