@@ -1,9 +1,8 @@
 # fx-orders-capture - Overview
 
-This is part of a data service project that uses java spring microservice (fx-orders-capture), kafka, cassandra to capture a hypothetical forex trade and publishes it to kafka topic (tradeCapture) and awaits for an acknowledgement for upto 5 seconds. There is another microservice (fx-orders-processor) that process the trade and inserts into a cassandra table (orders) under keyspace traderecords. 
+This is part of a data service project that uses java spring microservice (fx-orders-capture and fx-orders-capture), kafka, cassandra to capture a hypothetical forex trade from front-end and publishes it to kafka topic (tradeCapture) and awaits for an acknowledgement for upto 5 seconds. It also has a trade search function that uses kafka as a request-reply (simulated syncronous) bridge to publish a trade search request to kafka request topic (tradeRequest) and retrieves the trade response from response topic (tradeReply) and displays on the front-end.
 
-
-We also have a search operation where an user can search a trade by using the order ID. As soon an user enters order ID in the search area and press enter the microservice (fx-orders-capture) publishes that order to kafka topic and awaits for a response upto 5 seconds before a time out response is returned back to front end. The other microservice (fx-orders-processor) retrieves that search ID from the request topic (tradeRequest) and retrieves the trade from cassandra table (orders) and publishes that trade to response topic (tradeReply). The requesting microdervice (fx-orders-capture) than picks that response and returns back to front end and display it.
+The microservice - fx-orders-processor process the trade and inserts into a cassandra table (orders) under keyspace traderecords. It also reads a trade search request from topic (tradeRequest) and retrieves the trade from cassandra table (orders) and publishes that trade to response topic (tradeReply).
 
 We would be using spring boot thymeleaf for the front-end part to make this project simpler but it may have been better to use angular of react as well. 
 
@@ -92,7 +91,9 @@ mvn spring-boot:run
 
 Test from Browser (GUI)
 -------------------------
-Once application is up and running by using above run command then open a browser and test the application using below url
+We also require fx-orders-capture microservice https://github.com/pmjobsearch01/fx-orders-processor.git to run along with fx-orders-capture microservice.
+
+Once both of the applications is up and running by using above run command open a browser and test the application using below url
 
 http://localhost:8080/
 
@@ -101,3 +102,6 @@ http://localhost:8080/
 ![newOrder](doc/newOrder.jpg)
 
 ![searchOrder](doc/searchOrder.jpg)
+
+
+You may contact me for professional consulation around an issue or enhancement e.g. adding docker containers or additional functional or non-functional aspects. https://www.linkedin.com/in/parthamondal/
