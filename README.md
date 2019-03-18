@@ -67,6 +67,9 @@ The basic configuration are as below
 - `double click on cassandra.bat` (Windows)
 - `run equivalent shell script in unix` (UNIX)
 
+* If you would like to verify data inside cassandra table then you have to install python and set PYTHON_HOME environment variable.
+* Once you open a cassandra client shell you can use these commands use traderecords; select * from orders;
+
 
 ## By default cassandra will run on port 9042 and Kafka will run on port 9092 and Apache Zookeeper will run on port 2181. If you change any of these default setting then accordingly update microservice properties inside resource folder.
 
