@@ -16,7 +16,7 @@ We would be using spring boot thymeleaf for the front-end part to make this proj
 * retrive a response from kafka topic (tradeReply) and display it to front end
 
 ## Overall architecture
-[![architecture](doc/architecture.jpg)
+![architecture](doc/architecture.jpg)
 
 
 ## Basic configuration
@@ -96,6 +96,7 @@ Once application is up and running by using above run command then open a browse
 http://localhost:8080/
 
 
-[![newOrder](doc/newOrder.jpg)
 
-[![searchOrder](doc/searchOrder.jpg)
+![newOrder](doc/newOrder.jpg)
+
+![searchOrder](doc/searchOrder.jpg)
