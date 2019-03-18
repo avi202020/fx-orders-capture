@@ -21,7 +21,7 @@ This microservice work together with another microservice https://github.com/pmj
 
 ## Basic configuration
 
-This sample application shows how 
+The basic configuration are as below
 
 ## Start Zookeeper
 * Download zookeeper from http://zookeeper.apache.org/releases.html#download and extract it to local drive. 
