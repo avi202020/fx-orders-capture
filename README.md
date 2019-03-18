@@ -80,13 +80,13 @@ git clone https://github.com/pmjobsearch01/fx-orders-capture.git
 
 If you have maven installed and in the path then use below command to build and run junit test cases that proves the core functions,
 
-- Go to the folder where the code is checked-out (you should see the pom.xml in your current folder)
+Go to the folder where the code is checked-out (you should see the pom.xml in your current folder)
 
 cd fx-orders-capture
 
 mvn clean install
 
-## If you are looking for ReST service APIs then have a look at com.poc.fxorder.web.FXRestController.java and corresponding JUnit tests classes
+* If you are looking for ReST service APIs then have a look at com.poc.fxorder.web.FXRestController.java and corresponding JUnit tests classes
 
 
 Run Application
