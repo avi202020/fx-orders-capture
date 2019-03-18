@@ -86,6 +86,9 @@ cd fx-orders-capture
 
 mvn clean install
 
+## If you are looking for ReST service APIs then have a look at com.poc.fxorder.web.FXRestController.java and corresponding JUnit tests classes
+
+
 Run Application
 --------------------------
 mvn spring-boot:run
