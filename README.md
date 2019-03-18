@@ -16,7 +16,7 @@ We would be using spring boot thymeleaf for the front-end part to make this proj
 * retrive a response from kafka topic (tradeReply) and display it to front end
 
 ## Overall architecture
-[![architecture](doc/architecture.jpg)]
+[![architecture](doc/architecture.jpg)
 
 
 ## Basic configuration
@@ -24,21 +24,51 @@ We would be using spring boot thymeleaf for the front-end part to make this proj
 This sample application shows how 
 
 ## Start Zookeeper
-Download zookeeper from http://zookeeper.apache.org/releases.html#download and extract it to local drive. Rename “zoo_sample.cfg” to “zoo.cfg”. Also edit dataDir inside zoo.cfg to a valid path e.g. \zookeeper\data
-Ensure you have java installed and JAVA_HOME is set in the system environment variable. Also add ZOOKEEPER_HOME environment variable upto bin path of your zookeeper directory and add ;%ZOOKEEPER_HOME%\bin; to PATH variable.
+* Download zookeeper from http://zookeeper.apache.org/releases.html#download and extract it to local drive. 
+* Rename “zoo_sample.cfg” to “zoo.cfg” (for windows machines only). 
+* Also edit dataDir entry inside zoo.cfg to a valid path e.g. \zookeeper\data (for windows machines only).
+* Ensure you have java installed and JAVA_HOME is set in the system environment variable (for windows machines only). 
+* Add ZOOKEEPER_HOME environment variable upto bin path of your zookeeper directory (for windows machines only)
+* Add ;%ZOOKEEPER_HOME%\bin; to PATH variable (for windows machines only)
 
 - `double click bin/zkServer.cmd` (windows)
 - `bin/zookeeper-server-start.sh config/zookeeper.properties` (UNIX)
 
 
 ## Start Kafka Server
-- `bin/kafka-server-start.sh config/server.properties`
+* Download kafka from https://kafka.apache.org/
+* Extract it and edit “server.properties” inside config folder
+* Change log.dirs to a valid path e.g. (windows) “=C:\\kafka\\kafka-logs”
+* Open a dos shell and go inside kafka bin directory e.g. cd C:\kafka\kafka_2.11-1.0.0\bin\windows
+
+- `kafka-server-start.bat ../../config/server.properties` (UNIX)
+- `bin/kafka-server-start.sh config/server.properties` (UNIX)
 
 ## Create Kafka Topic
-- `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Kafka_Example`
+- `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeCapture` (UNIX)
+
+- `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeRequest` (UNIX)
+
+- `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeReply` (UNIX)
+
+- `kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeCapture` (Windows)
+
+- `kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeRequest` (Windows)
+
+- `kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tradeReply` (Windows)
+
 
 ## Start Cassandra
-- `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic Kafka_Example --from-beginning`
+* dwonload cassandra from http://cassandra.apache.org/download/
+* Extract it to local drive
+* Simply run the installer and leave everything default
+* Go to cassandra installation directory inside bin folder
+* Leave everything default
+
+- `double click on cassandra.bat` (Windows)
+- `run equivalent shell script in unix` (UNIX)
+
+## By default cassandra will run on port 9042 and Kafka will run on port 9092 and Apache Zookeeper will run on port 2181. If you change any of these default setting then accordingly update microservice properties inside resource folder.
 
 JUnit Test
 ------------------
@@ -66,6 +96,6 @@ Once application is up and running by using above run command then open a browse
 http://localhost:8080/
 
 
-[![newOrder](doc/newOrder.jpg)]
+[![newOrder](doc/newOrder.jpg)
 
-[![searchOrder](doc/searchOrder.jpg)]
+[![searchOrder](doc/searchOrder.jpg)
