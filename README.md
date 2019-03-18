@@ -4,7 +4,7 @@ This is part of a data service project that uses java spring microservice (fx-or
 
 The microservice - fx-orders-processor process the trade by reading from kafka topic (tradeCapture) and inserts into a cassandra table (orders) under keyspace traderecords. It also reads a trade search request from topic (tradeRequest) and retrieves the trade from cassandra table (orders) and publishes that trade to response topic (tradeReply).
 
-We would be using spring boot thymeleaf for the front-end part to make this project simpler but it may have been better to use angular of react as well. 
+We would be using spring boot thymeleaf for the front-end part to make this project simpler but it may have been better to use angular or react as well. 
 
 This microservice work together with another microservice https://github.com/pmjobsearch01/fx-orders-processor.git
 
