@@ -68,7 +68,7 @@ The basic configuration are as below
 - `run equivalent shell script in unix` (UNIX)
 
 
-## By default cassandra will run on port 9042 and Kafka will run on port 9092 and Apache Zookeeper will run on port 2181. If you change any of these default setting then accordingly update microservice properties inside resource folder.
+* By default cassandra will run on port 9042 and Kafka will run on port 9092 and Apache Zookeeper will run on port 2181. If you change any of these default setting then accordingly update microservice properties inside resource folder.
 
 
 JUnit Test
