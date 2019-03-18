@@ -1,6 +1,6 @@
 # fx-orders-capture - Overview
 
-This is part of a data service project that uses java spring microservice (fx-orders-capture and fx-orders-processor), kafka, cassandra to capture a hypothetical forex trade from front-end and publishes it to kafka topic (tradeCapture) and awaits for an acknowledgement for upto 5 seconds. It also has a trade search function that uses kafka as a request-reply (simulated syncronous) bridge to publish a trade search request to kafka request topic (tradeRequest) and retrieves the trade response from response topic (tradeReply) and displays on the front-end.
+This is part of a data service project that uses java spring microservice (fx-orders-processor and fx-orders-capture), kafka, cassandra. The microservice fx-orders-capture captures a hypothetical forex trade from front-end and publishes it to kafka topic (tradeCapture) and awaits for an acknowledgement for upto 5 seconds. It also has a trade search function that uses kafka as a request-reply (simulated syncronous) bridge to publish a trade search request to kafka request topic (tradeRequest) and retrieves the trade response from response topic (tradeReply) and displays on the front-end.
 
 The microservice - fx-orders-processor process the trade by reading from kafka topic (tradeCapture) and inserts into a cassandra table (orders) under keyspace traderecords. It also reads a trade search request from topic (tradeRequest) and retrieves the trade from cassandra table (orders) and publishes that trade to response topic (tradeReply).
 
