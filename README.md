@@ -7,6 +7,7 @@ We also have a search operation where an user can search a trade by using the or
 
 We would be using spring boot thymeleaf for the front-end part to make this project simpler but it may have been better to use angular of react as well. 
 
+This microservice work together with another microservice https://github.com/pmjobsearch01/fx-orders-processor.git
 
 
 # This microservice (fx-orders-capture) is responsible for 
