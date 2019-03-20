@@ -41,7 +41,7 @@ The basic configuration are as below
 * Change log.dirs to a valid path e.g. (windows) “=C:\\kafka\\kafka-logs”
 * Open a dos shell and go inside kafka bin directory e.g. cd C:\kafka\kafka_2.11-1.0.0\bin\windows
 
-- `kafka-server-start.bat ../../config/server.properties` (UNIX)
+- `kafka-server-start.bat ../../config/server.properties` (Windows)
 - `bin/kafka-server-start.sh config/server.properties` (UNIX)
 
 ## Create Kafka Topic
